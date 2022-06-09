@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92af0078-45bb-4cd8-9801-b8e27e4eca12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PEprojectF-CodeLV1V2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Class/fileHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Class/menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Class/student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Class/studentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Class/validate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/admindata.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/idhistory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/student.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class/fileHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/fileHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class/menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class/student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class/validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/validate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/subject.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,5 +75,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PEprojectF_CodeLV1V2$Main.ic" NAME="Main Coverage Results" MODIFIED="1654760486382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

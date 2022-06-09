@@ -18,6 +18,7 @@ public class student {
         this.studentName = studentName;
         this.ID = ID;
         this.yearBorn = yearBorn;
+        this.phoneNumber = phoneNumber;
         this.major = major;
         this.averageScore = averageScore;
         this.updateTime = updateTime;
@@ -44,7 +45,7 @@ public class student {
         this.averageScore.addAll(averageScore);
     }
     public void setUpdateTime(String updateTime){
-
+        this.updateTime = updateTime;
     }
 
 }

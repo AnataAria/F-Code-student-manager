@@ -12,10 +12,13 @@ public class fileHandle {
     private String adminUserPassPack;
     private String studentPack;
     private String idHistoryPack;
+    private String subjectPack;
 
-    public fileHandle(String adminUserPassPack,String studentPack){
+    public fileHandle(String adminUserPassPack,String studentPack,String idHistoryPack,String subjectPack){
         this.adminUserPassPack = adminUserPassPack;
         this.studentPack = studentPack;
+        this.idHistoryPack = idHistoryPack;
+        this.subjectPack = subjectPack;
     }
 
     public fileHandle(){
@@ -83,18 +86,18 @@ public class fileHandle {
             while((line = filepointer.readLine()) != null){
                 temp = line.split(quotation);
                 String[] temp1 = new String[7];
-                for(int i = 0; i < 7; i++){
-                    temp1[i] = temp[i];
-                }
-                ArrayList<String> score = new ArrayList<String>();
-                int j = 0;
-                for(int i = 7; i < temp.length;i++){
-                    score.add(j,temp[i]);
-                    j++;
-                }
-                for(int i = 0; i < 7; i++){
-                    uploadData.addAll(Arrays.asList(temp1));
-                }
+//                for(int i = 0; i < 7; i++){
+//                    temp1[i] = temp[i];
+//                }
+//                ArrayList<String> score = new ArrayList<String>();
+//                int j = 0;
+//                for(int i = 7; i < temp.length;i++){
+//                    score.add(j,temp[i]);
+//                    j++;
+//                }
+//                for(int i = 0; i < 7; i++){
+//                    uploadData.addAll(Arrays.asList(temp1));
+//                }
 
             }
         }catch(IOException e){
@@ -151,5 +154,29 @@ public class fileHandle {
                 }
         }
         return ID;
+    }
+    public ArrayList<String> subject() throws IOException{
+        ArrayList<String> subjectList = new ArrayList<String>();
+        FileReader fr = new FileReader(subjectPack);
+        BufferedReader filepointer = new BufferedReader(fr);
+        String line = "";
+        try {
+            while ((line = filepointer.readLine()) != null) {
+                subjectList.add(line);
+            }
+            filepointer.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        return subjectList;
+    }
+    public void writeSubject(ArrayList<String> subject) throws IOException{
+        FileWriter fileWriter = new FileWriter(subjectPack);
+        BufferedWriter bw = new BufferedWriter(fileWriter);
+        PrintWriter pw = new PrintWriter(bw);
+        for (String element : subject) {
+            pw.println(element);
+        }
+        pw.close();
     }
 }

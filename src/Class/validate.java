@@ -3,7 +3,6 @@ public class validate {
     public validate(){
 
     }
-
     public boolean validateLoginInput(String userPass,int type){
         boolean flag = true;
         int fault = 0;

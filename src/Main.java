@@ -5,7 +5,9 @@ import Class.studentManager;
 import Class.student;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 enum typeheader{
     LOGIN,
@@ -18,10 +20,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
         String[] typeOfHeader = {"Login terminal", "Menu terminal", "Student terminal", "Student report terminal", "Grade report terminal" };
         String[] menuItem = {"Add new student","Add new subject","Update student","Update subject","Enter grade","Student grade report", "Subject grade report"};
-        String studentPack = "";
+        String studentPack = "E:\\JavaOOPTraining\\PEprojectF-CodeLV1V2\\src\\database\\student.csv";
         String adminDataPack = "E:\\JavaOOPTraining\\PEprojectF-CodeLV1V2\\src\\database\\admindata.csv";
+        String idHistoryPack = "E:\\JavaOOPTraining\\PEprojectF-CodeLV1V2\\src\\database\\idhistory";
+        String subjectPack = "E:\\JavaOOPTraining\\PEprojectF-CodeLV1V2\\src\\database\\subject.txt";
         menu menu = new menu(typeOfHeader,menuItem);
-        fileHandle fileHandle = new fileHandle(adminDataPack,studentPack);
+        fileHandle fileHandle = new fileHandle(adminDataPack,studentPack,idHistoryPack,subjectPack);
         validate validate = new validate();
         String[] loginInput;
         menu.headerMenu(0);
@@ -49,10 +53,14 @@ public class Main {
                 studentManager studentManager = new studentManager();
                 ArrayList<String> dataNewInput = menu.addNewStudent();
 
-
                 break;
             case 2:
-
+                menu.headerMenu(2);
+                ArrayList<String> subject = fileHandle.subject();
+                ArrayList<String> newSubject = new ArrayList<String>();
+                newSubject = menu.addNewSubject();
+                subject.addAll(newSubject);
+                fileHandle.writeSubject(subject);
                 break;
             case 3:
 

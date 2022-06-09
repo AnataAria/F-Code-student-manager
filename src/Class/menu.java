@@ -2,6 +2,7 @@ package Class;
 import java.io.IOException;
 import java.time.Year;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -67,5 +68,27 @@ public class menu extends Vector<String> {
 
 
         return addNew;
+    }
+    public ArrayList<String> addNewSubject(){
+        ArrayList<String> newSubject = new ArrayList<String>();
+        int i = 0;
+        while(true){
+            System.out.println("Enter new subject ");
+            Scanner sc = new Scanner(System.in);
+            String enter = sc.nextLine();
+            System.out.println("Enter description: ");
+            String enter1 = sc.nextLine();
+            newSubject.add(enter + ',' + enter1);
+            System.out.println("Do you want to add more subject(Y/N): ");
+            char confirm = sc.next().charAt(0);
+            if(confirm == 'y' || confirm == 'Y'){
+                System.out.println("Lets enter others");
+                i++;
+            }
+            else{
+                break;
+            }
+        }
+        return newSubject;
     }
 }
